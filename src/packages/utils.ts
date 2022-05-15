@@ -1,10 +1,15 @@
 import {
   exportToCanvas as _exportToCanvas,
   exportToSvg as _exportToSvg,
+  getExportSize as _getExportSize,
 } from "../scene/export";
 import { getDefaultAppState } from "../appState";
 import { AppState, BinaryFiles } from "../types";
-import { ExcalidrawElement, NonDeleted } from "../element/types";
+import {
+  ExcalidrawElement,
+  NonDeleted,
+  NonDeletedExcalidrawElement,
+} from "../element/types";
 import { getNonDeletedElements } from "../element";
 import { restore } from "../data/restore";
 import { MIME_TYPES } from "../constants";
@@ -164,6 +169,14 @@ export const exportToSvg = async ({
     },
     files,
   );
+};
+
+export const getExportSize = (
+  elements: NonDeletedExcalidrawElement[],
+  exportPadding: number,
+  scale: number,
+): [number, number] => {
+  return _getExportSize(elements, exportPadding, scale);
 };
 
 export const exportToClipboard = async (

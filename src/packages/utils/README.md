@@ -26,6 +26,10 @@ Export an Excalidraw diagram to a [Blob](https://developer.mozilla.org/en-US/doc
 
 Export an Excalidraw diagram to a [SVGElement](https://developer.mozilla.org/en-US/docs/Web/API/SVGElement).
 
+### `getExportSize`
+
+Export the diagram width and height.
+
 ## Usage
 
 Excalidraw utils is published as a UMD (Universal Module Definition). If you are using a Web bundler (for instance, Webpack), you can import it as an ES6 module:

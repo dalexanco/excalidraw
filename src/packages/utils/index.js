@@ -1,1 +1,6 @@
-export { exportToBlob, exportToSvg, exportToCanvas } from "../utils.ts";
+export {
+  exportToBlob,
+  exportToSvg,
+  exportToCanvas,
+  getExportSize,
+} from "../utils.ts";
